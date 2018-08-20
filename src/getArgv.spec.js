@@ -133,8 +133,8 @@ describe('getArgv', () => {
       expect(type).toEqual('string');
     });
 
-    it('should pass `true` as options.demandOption', () => {
-      expect(demandOption).toBeTrue();
+    it('should not pass `true` as options.demandOption', () => {
+      expect(demandOption).toBeFalsy();
     });
   });
 });

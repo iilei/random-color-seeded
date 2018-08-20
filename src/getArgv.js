@@ -22,10 +22,10 @@ const getArgv = () => require('yargs')
   })
   .option('seed', {
     alias: 'i',
-    demandOption: true,
     describe: 'Seed Input',
     // type: array / boolean / count / number / string
     type: 'string',
+    default: `${(new Date()).valueOf()}`,
   })
   .argv;
 

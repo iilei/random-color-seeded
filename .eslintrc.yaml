@@ -1,0 +1,62 @@
+# Styleguide based on airbnb's guide: https://github.com/airbnb/javascript
+---
+  extends:
+    - airbnb
+  root: true
+  parser: "babel-eslint"
+  globals:
+    process: false
+  env:
+    browser: true
+    node: true
+  rules:
+    no-magic-numbers:
+      - warn
+      -
+        ignoreArrayIndexes: true
+        ignore:
+          - 0
+          - 1
+    valid-jsdoc:
+      - warn
+    react/jsx-no-bind:
+      - error
+      -
+        ignoreRefs: true
+    import/no-extraneous-dependencies:
+      - warn
+      - devDependencies:
+        - "**/*.spec.js"
+        - "**/*.test.js"
+        - "./jestsetup.js"
+        - "__mocks__/*"
+  overrides:
+    -
+      files:
+        - "**/*.spec.js"
+        - "**/*.test.js"
+        - "./jestsetup.js"
+        - "__mocks__/*"
+      rules:
+        no-underscore-dangle:
+          - off
+        no-console:
+          - off
+        no-magic-numbers:
+          - off
+        arrow-parens:
+          - off
+        global-require:
+          - off
+        no-unused-vars:
+          - off
+        object-curly-newline:
+          - off
+        arrow-body-style:
+          - off
+        no-unused-expressions:
+          - off
+        prefer-destructuring:
+          - off
+      env:
+        jest: true

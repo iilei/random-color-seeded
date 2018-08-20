@@ -1,0 +1,16 @@
+node_modules/
+coverage/
+build
+bin
+
+# Yarn
+.yarnclean
+
+# Logs
+logs
+*.log
+
+#### Environment
+.env
+
+random-color-seeded*.tgz

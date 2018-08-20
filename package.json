@@ -1,0 +1,72 @@
+{
+  "name": "random-color-seeded",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "tdd": "cross-env NODE_ENV=test jest --watch",
+    "test": "cross-env NODE_ENV=test jest --coverage",
+    "start": "npm run -s neat-env -- ./src/index.js",
+    "neat-env": "cross-env NODE_ENV=development dotenv-load node --require 'babel-register'",
+    "build": "cross-env BABEL_ENV=production npx babel src --out-dir bin --ignore spec.js",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Jochen Preusche (iilei) <iilei@users.noreply.github.com>",
+  "preferGlobal": true,
+  "license": "Unlicense",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-shebang": "0.0.0",
+    "babel-plugin-uglify": "^1.0.2",
+    "babel-preset-airbnb": "^2.5.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "jest-extended": "^0.8.1",
+    "jest-mock-process": "^1.0.0",
+    "yargs": "git+https://github.com/iilei/yargs.git#implies_nested_value_fix"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-extended",
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!coverage/**/*",
+      "!<rootDir>/src/middleware/index.js",
+      "!<rootDir>/__mocks__/**/*"
+    ],
+    "rootDir": "./",
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iilei/random-color"
+  },
+  "dependencies": {
+    "dotenv-load": "^1.1.0",
+    "hsluv": "0.0.3",
+    "seedrandom": "^2.4.4"
+  },
+  "bin": {
+    "random-color-seeded": "bin/index.js"
+  }
+}

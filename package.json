@@ -1,6 +1,6 @@
 {
   "name": "random-color-seeded",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "scripts": {
     "tdd": "cross-env NODE_ENV=test jest --watch",
@@ -36,8 +36,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.5.0",
     "jest-extended": "^0.8.1",
-    "jest-mock-process": "^1.0.0",
-    "yargs": "git+https://github.com/iilei/yargs.git#implies_nested_value_fix"
+    "jest-mock-process": "^1.0.0"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "jest-extended",
@@ -64,7 +63,8 @@
   "dependencies": {
     "dotenv-load": "^1.1.0",
     "hsluv": "0.0.3",
-    "seedrandom": "^2.4.4"
+    "seedrandom": "^2.4.4",
+    "yargs": "git+https://github.com/iilei/yargs.git#implies_nested_value_fix"
   },
   "bin": {
     "random-color-seeded": "bin/index.js"

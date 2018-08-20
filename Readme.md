@@ -11,8 +11,6 @@ Install:
 ```
 npm i -g random-color-seeded
 ``` 
-
-
 # Run
 
 ```bash

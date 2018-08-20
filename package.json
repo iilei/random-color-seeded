@@ -1,6 +1,6 @@
 {
   "name": "random-color-seeded",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "scripts": {
     "tdd": "cross-env NODE_ENV=test jest --watch",
@@ -64,7 +64,7 @@
     "dotenv-load": "^1.1.0",
     "hsluv": "0.0.3",
     "seedrandom": "^2.4.4",
-    "yargs": "git+https://github.com/iilei/yargs.git#implies_nested_value_fix"
+    "yargs": "^12.0.1"
   },
   "bin": {
     "random-color-seeded": "bin/index.js"
